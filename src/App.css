@@ -1,38 +1,150 @@
-.App {
-  text-align: center;
+.App{
+    width: 100%;
+    height: 100vh;
+    background-color: #0A1118;
+    font-family: "Montserrat",sans-serif;
+    display: flex;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.left_Container{
+    width: 40%;
+    height: 100vh;
+    background-color: #252529;
+    padding: 5vw 6vw;
+    color: #ffff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.verification{
+    margin-top: 15vh;
+    font-size: 200%;
+    font-weight: 550;
+}
+
+.instruction_Box{
+    margin-top: 6vh;
+    width: 76%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.otp_Demo{
+    color: grey;
+}
+
+.inputs_Container{
+    width: 80%;
+    margin-top: 2vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input_Box{
+    width: 20%;
+    font-size: 34px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin: 3px;
+    background: #2a3137;
+    font-weight: bold;
+    color: #fff;
+    outline: none;
+    transition: all 0.1s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+
+.wrong_Line{
+    margin-top: 4vh;
+    font-size: large;
+}
+.reEnter{
+    color:blueviolet;
+    cursor: pointer;
+}
+
+.verify_Btn{
+    margin-top: 4vh;
+    width: 80%;
+    padding: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    border: 1px solid transparent;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 6px 0px, rgba(0, 0, 0, 0.1) 0px 8px 8px 0px, rgba(0, 0, 0, 0.1) 0px 16px 16px 0px, rgba(0, 0, 0, 0.15) 8px 32px 32px 0px, rgba(0, 0, 0, 0.15) 8px 64px 64px 0px;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    background-image: linear-gradient(to right,#F76F47, #BD61EC);
+}
+input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  input {
+    -moz-appearance: textfield;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+.verify_Btn:hover{
+    cursor: pointer;
+    background-image: linear-gradient(to left, #F76F47, #BD61EC);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px 0px, rgba(0, 0, 0, 0.22) 0px 15px 12px 0px;
+}
+
+.goBack{
+    margin-top: 15vh;
+    font-size: large;
+}
+
+
+/* designing of elements of right container */
+.right_Container{
+    width: 60%;
+    height: 100vh;
+    position: relative;
+}
+
+.mesh_Img{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 80vh;
+}
+.dashboard_Img{
+    position: absolute;
+    right: 0px;
+    bottom: 0;
+    width: 75%;
+    height: 63%;
+    border-radius: 10px;
+}
+
+
+/* Adding Responsiveness */
+@media screen and (max-width:850px) {
+    .left_Container{
+        width: 50%;
+    }
+    .right_Container{
+        width: 50%;
+    }
+}
+@media screen and (max-width:700px) {
+    .left_Container{
+        width: 55%;
+    }
+    .right_Container{
+        width: 45%;
+    }
+}
+@media screen and (max-width:530px) {
+    .left_Container{
+        width: 100%;
+    }
+    .right_Container{
+        display: none;
+    }
 }
